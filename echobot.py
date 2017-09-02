@@ -1072,7 +1072,7 @@ def bot(op):
                 if msg.from_ in staff:
 
                     start = time.time()
-                    l.sendText(msg.to, "Bot 1 Processing Request")                    
+                    cl.sendText(msg.to, "Bot 1 Processing Request")                    
                     elapsed_time = time.time() - start
                     cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 
