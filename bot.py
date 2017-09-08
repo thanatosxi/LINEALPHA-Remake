@@ -1464,38 +1464,38 @@ def bot(op):
                     cl.sendText(msg.to,"Admin permission required.")
                     print "[Error]Command denied - Admin permission required"
 
-            elif "Ar Stalk " in msg.text:
-                print "[Command]Stalk executing"
-                stalkID = msg.text.replace("Ar Stalk ","")
-                subprocess.call(["instaLooter",stalkID,"tmp/","-n","1"])   
-                files = glob.glob("tmp/*.jpg")
-                for file in files:
-                    os.rename(file,"tmp/tmp.jpg")
-                fileTmp = glob.glob("tmp/tmp.jpg")
-                if not fileTmp:
-                    cl.sendText(msg.to, "Image not found, maybe the account haven't post a single picture or the account is private")
-                    print "[Command]Stalk executed - no image found"
-                else:
-                    image = upload_tempimage(client)
-                    cl.sendText(msg.to, format(image['link']))
-                    print "[Command]Stalk executed - success"
+            # elif "Ar Stalk " in msg.text:
+            #     print "[Command]Stalk executing"
+            #     stalkID = msg.text.replace("Ar Stalk ","")
+            #     subprocess.call(["instaLooter",stalkID,"tmp/","-n","1"])   
+            #     files = glob.glob("tmp/*.jpg")
+            #     for file in files:
+            #         os.rename(file,"tmp/tmp.jpg")
+            #     fileTmp = glob.glob("tmp/tmp.jpg")
+            #     if not fileTmp:
+            #         cl.sendText(msg.to, "Image not found, maybe the account haven't post a single picture or the account is private")
+            #         print "[Command]Stalk executed - no image found"
+            #     else:
+            #         image = upload_tempimage(client)
+            #         cl.sendText(msg.to, format(image['link']))
+            #         print "[Command]Stalk executed - success"
 
-            elif "Ar stalk " in msg.text:
-                print "[Command]Stalk executing"
-                stalkID = msg.text.replace("Ar stalk ","")
-                subprocess.call(["instaLooter",stalkID,"tmp/","-n","1"])   
-                files = glob.glob("tmp/*.jpg")
-                for file in files:
-                    os.rename(file,"tmp/tmp.jpg")
-                fileTmp = glob.glob("tmp/tmp.jpg")
-                if not fileTmp:
-                    cl.sendText(msg.to, "Image not found, maybe the account haven't post a single picture or the account is private")
-                    print "[Command]Stalk executed - no image found"
-                else:
-                    image = upload_tempimage(client)
-                    cl.sendText(msg.to, format(image['link']))
-                    subprocess.call(["sudo","rm","-rf","tmp/tmp.jpg"])
-                    print "[Command]Stalk executed - success"
+            # elif "Ar stalk " in msg.text:
+            #     print "[Command]Stalk executing"
+            #     stalkID = msg.text.replace("Ar stalk ","")
+            #     subprocess.call(["instaLooter",stalkID,"tmp/","-n","1"])   
+            #     files = glob.glob("tmp/*.jpg")
+            #     for file in files:
+            #         os.rename(file,"tmp/tmp.jpg")
+            #     fileTmp = glob.glob("tmp/tmp.jpg")
+            #     if not fileTmp:
+            #         cl.sendText(msg.to, "Image not found, maybe the account haven't post a single picture or the account is private")
+            #         print "[Command]Stalk executed - no image found"
+            #     else:
+            #         image = upload_tempimage(client)
+            #         cl.sendText(msg.to, format(image['link']))
+            #         subprocess.call(["sudo","rm","-rf","tmp/tmp.jpg"])
+            #         print "[Command]Stalk executed - success"
 
             elif "Ar Add @" in msg.text:
                 if msg.toType == 2:
