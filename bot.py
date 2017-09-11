@@ -2,7 +2,6 @@
 import LineAlpha
 from LineAlpha.lib.curve.ttypes import *
 from datetime import datetime
-from imgurpython import ImgurClient
 import time,random,sys,json,codecs,threading,glob,os,subprocess,multiprocessing
 
 cl = LineAlpha.LINE()
@@ -36,7 +35,7 @@ client_secret = '948a2fcdbf566c04bcce5f990e349ce795ee7460'
 access_token = '30181acf5583ad6a215b4f69e6e5c7bc5c66efdb'
 refresh_token = '4a6b3f983b96714c2e9b581edf86f86e0d681938'
 
-client = ImgurClient(client_id, client_secret, access_token, refresh_token)
+# client = ImgurClient(client_id, client_secret, access_token, refresh_token)
 
 print "login success"
 reload(sys)
@@ -204,11 +203,11 @@ bot5_name = {
 
 setTime = {}
 setTime = wait2['setTime']
-
-def upload_tempimage(client):
-    '''
+'''
+# def upload_tempimage(client):
+    
         Upload a picture of a kitten. We don't ship one, so get creative!
-    '''
+    
 
     # Here's the metadata for the upload. All of these are optional, including
     # this config dict itself.
@@ -225,7 +224,7 @@ def upload_tempimage(client):
     print()
 
     return image
-
+'''
 
 def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes = Message()
