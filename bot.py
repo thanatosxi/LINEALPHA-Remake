@@ -36,7 +36,7 @@ client_secret = '948a2fcdbf566c04bcce5f990e349ce795ee7460'
 access_token = '30181acf5583ad6a215b4f69e6e5c7bc5c66efdb'
 refresh_token = '4a6b3f983b96714c2e9b581edf86f86e0d681938'
 
-client = ImgurClient(client_id, client_secret, access_token, refresh_token)
+#client = ImgurClient(client_id, client_secret, access_token, refresh_token)
 
 print "login success"
 reload(sys)
